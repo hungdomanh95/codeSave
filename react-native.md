@@ -1,26 +1,26 @@
-# Create new appp
+- # Create new appp
+  ```
+  - npx react-native init AwesomeProject
+  ```
+- # USE PROPS IN CSS
 
-  -npx react-native init AwesomeProject
+  ```
+    const testComponent = (props) => {
 
-# USE PROPS IN CSS
+      const styles = styleWithProps(props)
 
-  const testComponent = (props) => {
+      return (...)
 
-    const styles = styleWithProps(props)
+    }
+    const styleWithProps = (props) =>(
 
-    return (...)
+      StyleSheet.create({
 
-  }
+        style:{
 
-  const styleWithProps = (props) =>(
+          backgroundColor:props.color || "#2679f1",
 
-    StyleSheet.create({
+      }}))
 
-      style:{
-
-        backgroundColor:props.color || "#2679f1",
-
-    }}))
-
-  export default testComponent
-
+    export default testComponent
+  ```
