@@ -1,4 +1,4 @@
-- # Create new appp
+- # CREATE NEW APP
   ```
   - npx react-native init AwesomeProject
   ```
