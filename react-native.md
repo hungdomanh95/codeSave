@@ -1,3 +1,7 @@
+# Create new appp
+
+  -npx react-native init AwesomeProject
+
 # USE PROPS IN CSS
 
   const testComponent = (props) => {
