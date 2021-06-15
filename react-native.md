@@ -24,3 +24,15 @@
 
     export default testComponent
   ```
+
+- # Gradlew
+
+  -- Error: spawn ./gradlew EACCES
+
+  -- ./gradlew app:installDebug -PreactNativeDevServerPort=8081S
+
+  ---> run at terminal
+
+  ```
+  chmod 755 android/gradlew
+  ```
