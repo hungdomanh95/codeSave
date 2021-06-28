@@ -36,3 +36,10 @@
   ```
   chmod 755 android/gradlew
   ```
+- # OPEN METRO BY ITERM2
+
+  -- Open $PROJECT/node_modules/react-native/scripts/launchPackager.command
+
+  -- Right click launchPackager.command
+
+  -- Get Infor -> openWidth -> ITERM 2
