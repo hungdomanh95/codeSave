@@ -1,0 +1,30 @@
+.ring-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    .circle {
+      width: 80px;
+      height: 80px;
+      background-color: red;
+      border: 2px solid white;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .ringring {
+      background-color: rgba(220, 53, 69, 0.5);
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+      animation: pulsate 2400ms ease-out infinite;
+  
+      opacity: 0;
+    }
+  }

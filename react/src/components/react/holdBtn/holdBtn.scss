@@ -1,0 +1,17 @@
+.holdBtn {
+
+  .content-holdBtn {
+    @include flexCenter;
+    .count-items {
+      border: 1px solid #ceddf2;
+      height: 30px;
+      width: 30px;
+      border-radius: 8px;
+      @include flexCenter;
+      span {
+        font-size: 20px;
+      }
+      margin: 0 10px;
+    }
+  }
+}

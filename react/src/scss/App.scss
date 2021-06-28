@@ -1,0 +1,147 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #222831;
+  color:#abb2bf;
+  font-family: Consolas,Menlo,Monaco,source-code-pro,Courier New,monospace;
+  margin: 0 10px;
+  h2{
+    display: flex;
+    color: #EFBB35;
+    align-items: center;
+    &::after,&::before{
+      content: " ";
+      background: linear-gradient(to right,rgba(239, 187, 53, 0.6),rgba(236, 198, 48, .1));
+      height: 3px;
+      position: relative;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: auto;
+      // margin: .8em 2px 0 3px;
+      flex-grow: 1;
+      border-radius: 2px;
+      margin-left:10px;
+    }
+    &::before{
+      background: linear-gradient(to left,rgba(239, 187, 53, 0.6),rgba(236, 198, 48, .1));
+      margin-right:10px;
+    }
+  }
+  h3{
+    color: #EFBB35;
+    margin: unset;
+  }
+  h4{
+    color: #ff5c72;
+  }
+  a{
+    color:white
+  }
+  &::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+  }
+  
+  &::-webkit-scrollbar
+  {
+    width: 0.5px;
+    background-color: #F5F5F5;
+  }
+  
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 8px;
+    background-color: #555;
+  }
+}
+
+
+
+.App{
+  // .home{
+  //   background-color:"red";
+  //   font-size: 30px;
+  //   background-image: url('/images/banner.jpg');
+  // }
+  .menu{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    a{
+      text-decoration: none;
+    }
+  }
+  .content{
+    background: #011626 ;
+    color:#abb2bf;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px 0px;
+    .content-body{
+      max-height: 300px;
+      overflow-y: scroll;
+      margin: 20px;
+      position: relative;
+      &::-webkit-scrollbar-track{
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+      }
+      
+      &::-webkit-scrollbar{
+        width: 0.5px;
+        background-color: #F5F5F5;
+      }
+      
+      &::-webkit-scrollbar-thumb{
+        border-radius: 8px;
+        background-color: #555;
+      }
+
+      &.loading{
+        display: grid;
+        grid-template-columns: repeat(5,calc(100%/5));
+        overflow-x: hidden;
+      }
+      &.loading-color{
+        height: 300px;
+      }
+    }
+  }
+  .btn {
+    background-color: #68e194;
+    border-radius: 8px;
+    width: 15%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color:white;
+    cursor: pointer;
+}
+}
+
+@media only screen and (max-width: 768px) {
+  .content{
+    .content-body{
+      &.loading{
+        grid-template-columns: unset!important;
+      }
+    }
+  }
+}
+
+@import "./mixin.scss";
+@import "./animation.scss";
+@import "../components/react/holdBtn/holdBtn.scss";
+@import "../components/react/toggleBtn/toggleBtn.scss";
+@import "../components/react/Modal/modal.scss";
+@import "../components/static/loading/loading.scss";
+@import "../components/static/ringring/ringring.scss";
+@import "../components/static/toggle/toggle.scss";
+@import "../components/todolist/todolist.scss";
