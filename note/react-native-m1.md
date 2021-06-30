@@ -73,7 +73,7 @@ https://reactnative.dev/docs/environment-setup
 
   -- Build Setting --> add arm64 for Any iOS Simulator SDK ( Debug and Release )
 
-  ![picture](static/Xcode.png)
+  ![picture](./static/Xcode.png)
 
   -- Open podfile and paste below mentioned lines under react_native_post_install(installer)
 
@@ -83,13 +83,13 @@ https://reactnative.dev/docs/environment-setup
         end
   ```
 
-  ![picture](static/podfile.png)
+  ![picture](./static/podfile.png)
 
   -- Product --> Clean Build Folder
 
   -- Product --> Build
 
-  ![picture](static/build.png)
+  ![picture](./static/build.png)
 
   -- When build successed, you can run project :
 
@@ -123,7 +123,7 @@ https://reactnative.dev/docs/environment-setup
 
     -- Intel x86 Atom_64 System Image or Google APIs Intel x86 Atom System Image
 
-  ![picture](static/SDK.png)
+  ![picture](./static/SDK.png)
 
     -- Finally, click "Apply" to download and install the Android SDK and related build tools.
 
@@ -163,7 +163,7 @@ https://reactnative.dev/docs/environment-setup
   echo $PATH
   ```
 
-  ![picture](static/checkENV.png)
+  ![picture](./static/checkENV.png)
 
   -- And then, cd demoApp and run project :
   ```
@@ -198,7 +198,7 @@ https://reactnative.dev/docs/environment-setup
   ```
   echo $PATH
   ```
-  ![picture](static/checkENV.png)
+  ![picture](./static/checkENV.png)
 
   -- And then, cd demoApp and run project : yarn android or npm react-native run-android
 
