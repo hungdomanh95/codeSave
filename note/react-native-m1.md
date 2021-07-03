@@ -83,6 +83,37 @@ https://reactnative.dev/docs/environment-setup
         end
   ```
 
+   ```
+    use_flipper!({ 'Flipper' => '0.95.0', 'Flipper-Folly' => '2.6.7', 'Flipper-RSocket' => '1.4.3', 'Flipper-DoubleConversion' => '3.1.7', 'Flipper-Glog' => '0.3.9', 'Flipper-PeerTalk' => '0.0.4' })
+
+    post_install do |installer|
+      react_native_post_install(installer)
+
+      installer.pods_project.build_configurations.each do |config|
+        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+        config.build_settings["ONLY_ACTIVE_ARCH"] = "YES"
+      end
+
+      # attempt to add arm64 to app project
+      projects = installer.aggregate_targets
+      .map{ |t| t.user_project }
+      .uniq{ |p| p.path }
+      .push(installer.pods_project)
+
+      arm_value = `/usr/sbin/sysctl -n hw.optional.arm64 2>&1`.to_i
+
+      projects.each do |project|
+        project.build_configurations.each do |config|
+          if arm_value == 1 then
+            config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+          end
+        end
+
+        project.save()
+      end
+    end
+  end
+  ```
   ![picture](../static/podfile.png)
 
   -- Product --> Clean Build Folder
@@ -221,5 +252,5 @@ https://www.youtube.com/watch?v=Lr3OMHxDPHs
 
 https://youtu.be/kXSNqYN_RdE
 
-
+https://jimji1005.medium.com/building-react-native-ios-with-m1-without-rosetta-b7e626ccef0d
 
