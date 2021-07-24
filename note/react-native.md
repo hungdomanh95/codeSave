@@ -101,3 +101,24 @@
   end
   ```
 
+- # CHANGE FONT
+
+  -- coppy font to foldel src
+
+  -- creat react-native.config.js and
+    ```
+      module.exports = {
+        assets: ['./src/assets/fonts/'],
+      };
+    ```
+
+  -- react-native link
+
+  -- success -> check xcode, project -> Resources
+
+  -- rebuild project
+
+- # FIX ERROR NETWORK
+
+![picture](../static/networkError.png)
+
